@@ -1,13 +1,20 @@
 Linux commands
 
+apropos -find commands by searching through the short descriptions
 
-apropos
-to make file executable:
-chmod +x filename
+# installation
+installing using dpkg or use apt
+dpkg:
+to make file executable : chmod +x filename
 ./hello.swift
-to install package from .deb file :sudo dpkg -i yourfile.deb or sudo apt install ./yourfile.deb
+to install package from .deb file :
+sudo dpkg -i yourfile.deb or sudo apt install ./yourfile.deb
+# deleting
+sudo apt remove filename 
+sudo apt purge filename  //it will remove user data also
+sudo apt purge filename--data
 
-file management
+# file management
 | Command     | Description                   |
 | ----------- | ----------------------------- |
 | `pwd`       | Show current directory        |
@@ -52,3 +59,5 @@ file management
 | `find . -name "*.txt"` | Find all `.txt` files                                       |
 | `locate filename`      | Fast file search (requires `updatedb` index)                |
 
+
+# daemons

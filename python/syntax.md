@@ -79,8 +79,8 @@ dog.speak()
 #Creation
 import numpy as np
 a = np.array([1, 2, 3])
-z = np.zeros((2, 3))
-o = np.ones((3, 3))
+z = np.zeros((2, 3)) #create a 2d array with given size filled with 0s
+o = np.ones((3, 3)) 
 r = np.arange(0, 10, 2)
 l = np.linspace(0, 1, 5)
 rng = np.random.default_rng()
@@ -92,7 +92,7 @@ a.dtype        # data type
 a.size         # total elements
 a.nbytes       # memory (bytes)
 #Reshaping & Axis Ops
-a.reshape(2, 3)
+a.reshape(2, 3)  
 a.ravel()               # flatten view
 a.flatten()             # flatten copy
 a.transpose()

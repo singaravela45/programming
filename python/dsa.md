@@ -1,3 +1,10 @@
+# getting input:
+import sys
+data = iter(sys.stdin.read().split())
+
+n = int(next(data))
+arr = [int(next(data)) for _ in range(n)]
+
 # Array / List
 arr = [1, 2, 3]
 Add element at end	arr.append(x)
@@ -12,6 +19,7 @@ Check membership	x in arr
 Access
 arr[i]      # index
 arr[i:j]    # slicing
+first_even = next((x for x in arr if x % 2 == 0), -1) -finding first match or return -1
 
 # Tuple
 create : t = (1, 2, 3)
@@ -50,7 +58,7 @@ Remove key	d.pop(key)
 Keys	d.keys()
 Values	d.values()
 Items	d.items()
-
+d.pop(key)
 # Stack
 stack = []
 stack.append(x)   # push
