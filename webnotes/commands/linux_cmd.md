@@ -164,7 +164,25 @@ chmod +x myscript.sh
 ## syntax:
 
 Basic function syntax  
-my_function() {  
-  echo "Hello from the function"  
+name=vela  
+my_fn() {   
+  echo "Hello $name"  
 }  
-To run (call) the function:  
+To run (call) the function: 
+my_fn 
+
+to get input :
+read name  
+
+argument:  
+name=$1
+when executing : ./my_fn vela
+$1 first parameter   
+$2 second parameter   
+
+ifelse:
+if [ -z "$1" ]; then
+  echo "No argument given"
+else
+  echo "Argument is: $1"
+fi
