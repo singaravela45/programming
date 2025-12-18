@@ -39,10 +39,6 @@ sudo apt purge filename--data
 | `ls`         | List directory contents      |
 | `ls -l` or ll| Long listing with permissions|
 | `ls -a`or la | Include hidden files         |
-open in a default app xdg-open name
-ln -s /media/vela/CC6CBBB36CBB9724 ~/windows //creating a shortcut
-for creating alias go to .bashrc
-
 
 | Command                   | Description                                    |
 | ------------------------- | ---------------------------------------------- |
@@ -128,4 +124,39 @@ code &	Runs in background, terminal stays usable
 
 # running a server
 python3 -m http.server 8000
+
+# file editors:
+touch file            # create empty file
+cat:
+cat file               # show file contents
+cat > file             # create / overwrite file (Ctrl+D to save)
+cat >> file            # append to file
+
+nano:
+Ctrl + O   save (Write Out)
+Enter     confirm filename
+Ctrl + X   exit
+Ctrl + W   search
+Ctrl + \   replace
+Ctrl + K   cut line
+Ctrl + U   paste line
+Ctrl + _   go to line number
+
+open in a default app xdg-open name
+ln -s /media/vela/CC6CBBB36CBB9724 ~/windows //creating a shortcut
+for creating alias go to .bashrc
+
+# bash scripting
+echo $SHELL -which shell
+
+1. Create the script file
+touch myscript.sh
+Naming tip:
+Use .sh so it’s obvious it’s a script
+Use lowercase and no spaces
+2. #!/bin/bash
+is called a shebang. It tells the computer which program should run the file.
+
+chmod +x myscript.sh
+./myscript.sh
 
