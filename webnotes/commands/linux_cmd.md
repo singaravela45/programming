@@ -2,7 +2,7 @@ Linux commands
 
 apropos -find commands by searching through the short descriptions
 
-# installation
+## installation
 we can install .deb package using dpkg or use apt(recommended)
 1. Installing using a .deb Package:
 sudo apt install ./package-name.deb
@@ -12,22 +12,22 @@ chmod +x filename
 3. Run the Executable File
 ./filename
 
-# shortcuts
-ctrl+a - go to beginning of the line in cmd
-ctrl+e - go to end of the line in cmd
-ctrl+u - deletes everything before the cursor
-ctrl+k - deletes everything after the cursor
-ctrl+y - pastes the deleted content
-ctrl+x+e-edit the command in the editor
-alt +backspace - delete the last word 
-!! - runs last executed file like sudo !! will add permission to last executed file
+## shortcuts
+ctrl+a - go to beginning of the line in cmd  
+ctrl+e - go to end of the line in cmd  
+ctrl+u - deletes everything before the cursor  
+ctrl+k - deletes everything after the cursor  
+ctrl+y - pastes the deleted content  
+ctrl+x+e-edit the command in the editor  
+alt +backspace - delete the last word   
+!! - runs last executed file like sudo !! will add permission to last executed file  
 
-# deleting
-sudo apt remove filename 
-sudo apt purge filename  //it will remove user data also
-sudo apt purge filename--data
+## deleting  
+sudo apt remove filename   
+sudo apt purge filename  //it will remove user data also  
+sudo apt purge filename--data  
 
-# file management
+## file management
 | Command     | Description                   |
 | ----------- | ----------------------------- |
 | `pwd`       | Show current directory        |
@@ -76,87 +76,95 @@ sudo apt purge filename--data
 | `locate filename`      | Fast file search (requires `updatedb` index)                |
 
 
-# daemons(process)
-systemctl status servicename
-2. start/stop/restart:
-systemctl start servicename
-systemctl stop servicename
-systemctl restart servicename
-3. Enable / disable at boot:
-systemctl enable servicename
-systemctl disable servicename
-4. List all running services
-systemctl list-units -t service
-5. List all installed services (enabled + disabled)
-systemctl list-unit-files -t service
-Check if a daemon is running
-ps aux | grep servicename or sudo systemctl is-active servicename
-View logs for a service
-journalctl -u servicename
-journalctl -u servicename -f   # follow logs live
+## daemons(process)
+1. systemctl status servicename  
+2. start/stop/restart:  
+systemctl start servicename  
+systemctl stop servicename  
+systemctl restart servicename  
+3. Enable / disable at boot:  
+systemctl enable servicename  
+systemctl disable servicename  
+4. List all running services:  
+systemctl list-units -t service  
+5. List all installed services (enabled + disabled):    
+systemctl list-unit-files -t service  
+Check if a daemon is running  
+ps aux | grep servicename or sudo systemctl is-active servicename  
+View logs for a service  
+journalctl -u servicename  
+journalctl -u servicename -f   # follow logs live  
 
-ps / ss → process & ports
-ps displays information about currently running processes.
-Show all processes :ps aux
-Meaning:
-a → processes from all users
-u → user-oriented format (shows owner, CPU, memory)
-x → processes not attached to a terminal (daemons)
-ps aux | grep processname
-htop
+ps / ss → process & ports  
+ps displays information about currently running processes.  
+Show all processes :ps aux  
+Meaning:  
+a → processes from all users  
+u → user-oriented format (shows owner, CPU, memory)  
+x → processes not attached to a terminal (daemons)   
+ps aux | grep processname  
+htop  
 
-kill Command:
-kill PID  //process id 
-for getting process id :
-ps aux | grep processname // pgrep processname
+kill Command:   
+kill PID  //process id   
+for getting process id :  
+ps aux | grep processname // pgrep processname  
 
 job control:
-Job control lets you manage processes started from a terminal, allowing you to:
-pause them
-run them in the background
-bring them back to the foreground
-Ctrl + Z — Suspend a job
-bg id
-fg id 
-jobs — List current jobs
-code	Runs in foreground, terminal may stay busy
-code &	Runs in background, terminal stays usable
+Job control lets you manage processes started from a terminal, allowing you to:  
+pause them  
+run them in the background  
+bring them back to the foreground  
+Ctrl + Z — Suspend a job  
+bg id  
+fg id   
+jobs — List current jobs  
+code	Runs in foreground, terminal may stay busy  
+code &	Runs in background, terminal stays usable  
 
-# running a server
-python3 -m http.server 8000
-
+# running a server  
+python3 -m http.server 8000  
+  
 # file editors:
-touch file            # create empty file
+touch file            # create empty file  
 cat:
-cat file               # show file contents
-cat > file             # create / overwrite file (Ctrl+D to save)
-cat >> file            # append to file
+cat file               # show file contents  
+cat > file             # create / overwrite file (Ctrl+D to save)  
+cat >> file            # append to file  
 
 nano:
-Ctrl + O   save (Write Out)
-Enter     confirm filename
-Ctrl + X   exit
-Ctrl + W   search
-Ctrl + \   replace
-Ctrl + K   cut line
-Ctrl + U   paste line
-Ctrl + _   go to line number
+Ctrl + O   save (Write Out)  
+Enter     confirm filename  
+Ctrl + X   exit  
+Ctrl + W   search   
+Ctrl + \   replace  
+Ctrl + K   cut line  
+Ctrl + U   paste line  
+Ctrl + _   go to line number  
 
-open in a default app xdg-open name
-ln -s /media/vela/CC6CBBB36CBB9724 ~/windows //creating a shortcut
-for creating alias go to .bashrc
+open in a default app xdg-open name  
+ln -s /media/vela/CC6CBBB36CBB9724 ~/windows //creating a shortcut  
+for creating alias go to .bashrc  
 
-# bash scripting
-echo $SHELL -which shell
+# bash scripting  
+  
+echo $SHELL -which shell  
 
-1. Create the script file
-touch myscript.sh
-Naming tip:
-Use .sh so it’s obvious it’s a script
-Use lowercase and no spaces
-2. #!/bin/bash
-is called a shebang. It tells the computer which program should run the file.
+1. Create the script file  
+touch myscript.sh  
+Naming tip:  
+Use .sh so it’s obvious it’s a script  
+Use lowercase and no spaces  
+2. #!/bin/bash  
+is called a shebang. It tells the computer which program should run the file.add this to the top of the file
+3. to run the script 
+chmod +x myscript.sh  
+./myscript.sh  
 
-chmod +x myscript.sh
-./myscript.sh
+## syntax:
 
+Basic function syntax  
+my_function() {  
+  echo "Hello from the function"  
+}  
+To run (call) the function:  
