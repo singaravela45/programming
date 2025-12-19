@@ -192,3 +192,17 @@ fi
 -z "$var"	string is empty
 -n "$var"	string is not empty
 "$a" = "$b"	strings equal
+
+List all environment variables - env
+1. Set a variable (temporary)
+MY_VAR="hello"
+2. Export to child processes
+export MY_VAR="hello"
+3. Read / use a variable
+echo $MY_VAR
+echo "Value is $MY_VAR"
+4. Remove a variable
+unset MY_VAR
+5. Permanent variables
+Add to ~/.bashrc, ~/.bash_profile, or ~/.profile:
+export MY_VAR="helo"
