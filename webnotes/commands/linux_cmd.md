@@ -160,6 +160,8 @@ is called a shebang. It tells the computer which program should run the file.add
 3. to run the script 
 chmod +x myscript.sh  
 ./myscript.sh  
+4. to use anywhere
+Move your script to a PATH folder:sudo mv myscript.sh /usr/local/bin/myscript
 
 ## syntax:
 
@@ -186,3 +188,7 @@ if [ -z "$1" ]; then
 else
   echo "Argument is: $1"
 fi
+
+-z "$var"	string is empty
+-n "$var"	string is not empty
+"$a" = "$b"	strings equal
