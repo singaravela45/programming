@@ -1,18 +1,3 @@
-
-# collections
-## counters
-Counter is a subclass of dict for counting hashable objects.
-It stores elements as keys and their counts as values.
-```py
-from collections import Counter
-c = Counter([1, 2, 2, 3, 3, 3])
-print(c)  # Counter({3: 3, 2: 2, 1: 1})
-c.most_common(2) #first n element with higheset freq
-freq = Counter(words) 
-```
-# defaultdict
-d = defaultdict(list)
-
  #py equivalent for int_max
 inf = float('inf')
 neg_inf = float('-inf')
