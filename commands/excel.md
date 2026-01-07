@@ -20,7 +20,7 @@ IF:
 AND / OR
 =IF(AND(A1>=50,B1>=50),"Pass","Fail")
 
-4. Data Lookup (Used everywhere)
+4. Data Lookup 
 VLOOKUP (older, still common)
 =VLOOKUP(A2,A:B,2,FALSE)
 
