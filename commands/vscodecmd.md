@@ -12,3 +12,7 @@ Add cursor (click points)	Alt + Click
 add multicursor to all the existing words ctrl +f2  
 Toggle terminal	`Ctrl + `  
 New terminal	Ctrl + Shift + '  
+
+
+for creating a virtual environment for python :use venv
+source venv/bin/activate
