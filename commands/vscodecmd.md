@@ -15,4 +15,6 @@ New terminal	Ctrl + Shift + '
 
 
 for creating a virtual environment for python :use venv
-source venv/bin/activate
+Create the venv - python3 -m venv venv
+activate - source venv/bin/activate
+deactivation - deactivate
