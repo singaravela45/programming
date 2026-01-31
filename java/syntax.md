@@ -16,7 +16,6 @@ for(int i = 0; i < age.length; i++){
     System.out.println(age[i]);
 }
 ```
-
 ```java
 //collections
 
@@ -74,7 +73,6 @@ map.get(key);
 map.getOrDefault(key, defaultVal);
 map.containsKey(key);
 map.remove(key);
-
 
 //tree map
 TreeMap<Integer, Integer> tm = new TreeMap<>();
