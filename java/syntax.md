@@ -19,7 +19,6 @@ for(int i = 0; i < age.length; i++){
 
 ```java
 //collections
-
 //arraylist
 ArrayList<Integer> list = new ArrayList<>();
 list.add(x);
@@ -38,6 +37,7 @@ Collections.rotate(list, k);
 Collections.reverse(list);
 Collections.frequency(list, x);
 int m1 = Collections.min(list);
+
 int m2 = Collections.max(list);
 int freq = Collections.frequency(list, x);
 
@@ -99,6 +99,7 @@ q.offer(x);
 q.poll();    // remove + return
 q.peek();
 Queue<Integer> q = new ArrayDeque<>();
+
 //dequeu
 Deque<Integer> dq = new ArrayDeque<>();
 dq.addFirst(x);

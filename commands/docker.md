@@ -16,7 +16,7 @@ docker start <container>                        # start a container
 docker stop <container>                         # Stop a container
 docker rm <container>                           # Remove a container
 docker restart <container_id>
-
+    
 Images
 docker images          # List images
 docker pull <image>    # Download an image

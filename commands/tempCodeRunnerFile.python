@@ -1,0 +1,29 @@
+# DECISION TREE
+#23BEC0460
+from sklearn.tree import DecisionTreeClassifier, plot_tree
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import accuracy_score
+import matplotlib.pyplot as plt
+X = [[i] for i in range(1, 201)]
+y = []
+for i in range(1, 201):
+    if i <= 100:
+        y.append(0) 
+    else:
+        y.append(1) 
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+model = DecisionTreeClassifier(criterion="gini")
+model.fit(X_train, y_train)
+y_pred = model.predict(X_test)
+accuracy = accuracy_score(y_test, y_pred)
+print("Model Accuracy:", accuracy * 100, "%")
+test_numbers = [[45], [120], [180]]
+predictions = model.predict(test_numbers)
+for num, pred in zip(test_numbers, predictions):
+    if pred == 0:
+        print(f"{num[0]} belongs to group 1 (1–100)")
+    else:
+        print(f"{num[0]} belongs to group 2 (101–200)")
+plt.figure(figsize=(10, 6))
+plot_tree(model,feature_names=["Number"], class_names=["1–100", "101–200"],filled=True)
+plt.show()
