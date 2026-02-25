@@ -76,11 +76,12 @@ DELETE FROM V WHERE NAME='ram
 
 -- ORDER OF EXECUTION
 
--- SELECT  
--- FROM  
+-- FROM
+-- JOINS  
 -- WHERE  
 -- GROUP BY  
 -- HAVING  
+-- SELECT  
 -- ORDER BY  
 -- LIMIT/OFFSET
 
@@ -128,7 +129,6 @@ FROM Users
 GROUP BY first_name;
 ```
 -- PARTITION BY divides the result set into groups (partitions) for window functions.
-
 --SUBQUERY,LIMIT,OFFSET
 
 ```sql
@@ -299,7 +299,7 @@ SELECT COALESCE(NULL, NULL, 'Hello', 'World');
 -- Result: 'Hello' (first non-NULL).
 -- Default value when NULL
 
-###ROUND
+### ROUND
 -- ROUND(number, decimals)
 
 ```sql
