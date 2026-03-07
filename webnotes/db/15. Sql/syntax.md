@@ -94,6 +94,7 @@ DELETE FROM V WHERE NAME='ram
 --GROUP BY column
 --HAVING group_condition
 --ORDER BY column;
+--limit
 
 ## selection
 
