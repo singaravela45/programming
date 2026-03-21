@@ -87,8 +87,8 @@ tm.floorKey(k);
 Stack<Integer> st = new Stack<>();
 st.push(x);
 st.pop();
-st.peek();
-st.isEmpty();
+st.peek(); // top
+st.isEmpty(); 
 
 //queue
 Queue<Integer> q = new LinkedList<>();
