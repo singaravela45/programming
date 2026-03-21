@@ -92,13 +92,12 @@ st.isEmpty();
 
 //queue
 Queue<Integer> q = new LinkedList<>();
-q.add(x);
-q.offer(x);
-q.poll();    // remove + return
-q.peek();
+q.add(x);       
+q.poll();    // pop
+q.peek();    // front
 Queue<Integer> q = new ArrayDeque<>();
 
-//dequeu
+//deque
 Deque<Integer> dq = new ArrayDeque<>();
 dq.addFirst(x);
 dq.addLast(x);
@@ -111,7 +110,6 @@ dq.peekLast();
 PriorityQueue<Integer> pq = new PriorityQueue<>(); //min heap
 PriorityQueue<Integer> maxpq = new PriorityQueue<>(Collections.reverseOrder()); //max heap
 pq.add(x);
-pq.offer(x);
 pq.poll();   // pop smallest
 pq.peek();
 
