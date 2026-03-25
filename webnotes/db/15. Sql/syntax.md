@@ -76,14 +76,15 @@ DELETE FROM V WHERE NAME='ram
 
 -- ORDER OF EXECUTION
 
--- FROM
--- JOINS  
--- WHERE  
--- GROUP BY  
--- HAVING  
--- SELECT  
--- ORDER BY  
--- LIMIT/OFFSET
+FROM
+JOIN
+WHERE
+GROUP BY
+HAVING
+WINDOW FUNCTIONS 
+SELECT
+ORDER BY
+LIMIT / OFFSET
 
 --SYNTAX ORDER 
 
@@ -392,10 +393,9 @@ OVER (
 )  
 <function_name>: SUM, AVG, COUNT, ROW_NUMBER, RANK, LEAD, LAG, FIRST_VALUE, LAST_VALUE, etc. 
  
-OVER: Defines the “window” of rows the function looks at for each row.  
-PARTITION BY (optional): Divides the dataset into subsets, and the function is applied within each subset.  
-ORDER BY (optional): Defines the order of rows within the window—important for functions like ROW_NUMBER() or LAST_VALUE().  
-ROWS / RANGE (optional): Defines the frame of rows relative to the current row.  
+OVER() → whole table
+PARTITION BY → divide into groups
+ORDER BY → make it running / progressive
 
 ### Ranking Functions
 
