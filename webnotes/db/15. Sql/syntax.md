@@ -119,7 +119,10 @@ FROM your_table;
 --ANOTHER METHOD
 SELECT DATE_ADD(your_date_column, INTERVAL 1 DAY) AS next_date
 FROM your_table;
-
+--FOR SELECTING MONTH AND YEAR ONLY
+date_format(event_date, '%Y-%m') as month_year
+--ANOTHER METHOD
+year(event_date) as yr, month(event_date) as mn
 -- ORDER,GROUP,PARTITION
 SELECT * FROM v
 ORDER BY price DESC
