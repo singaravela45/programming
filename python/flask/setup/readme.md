@@ -1,0 +1,5 @@
+for deploying a html in flask , html should be in templates folder and css files should be in static folder 
+and connecting css file from html file is bit different here . we use dynamic url so refer setup
+
+first installations:
+pip install flask
