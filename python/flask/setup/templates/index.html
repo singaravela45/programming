@@ -1,0 +1,53 @@
+{% extends "base.html" %} {% block title %} Home {% endblock %} {% block content
+%}
+
+<h2>➕ Add User</h2>
+
+<form method="POST">
+  <input type="text" name="name" placeholder="Name" required />
+  <br /><br />
+
+  <input type="email" name="email_id" placeholder="Email" required />
+  <br /><br />
+
+  <input type="text" name="phone_num" placeholder="Phone" />
+  <br /><br />
+
+  <button type="submit">Add</button>
+</form>
+
+<hr />
+
+<h2>📋 User List</h2>
+
+<table border="1" cellpadding="8">
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Phone</th>
+    <th>Actions</th>
+  </tr>
+
+  {% for task in tasks %}
+  <tr>
+    <td>{{ task.user_id }}</td>
+    <td>{{ task.name }}</td>
+    <td>{{ task.email_id }}</td>
+    <td>{{ task.phone_num }}</td>
+
+    <td>
+      <a href="/edit/{{ task.user_id }}">✏️ Edit</a>
+      |
+      <a
+        href="/delete/{{ task.user_id }}"
+        onclick="return confirm('Delete this user?');"
+      >
+        🗑️ Delete
+      </a>
+    </td>
+  </tr>
+  {% endfor %}
+</table>
+
+{% endblock %}

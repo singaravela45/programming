@@ -1,29 +1,11 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-<head>
-    <title>{% block title %}My App{% endblock %}</title>
-
-    <!-- CSS block -->
-    {% block css %}
+  <head>
+    <title>{% block title %}Flask CRUD App{% endblock %}</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    {% endblock %}
-</head>
-<body>
 
-    <!-- Navbar block -->
-    {% block navbar %}
-    <nav>
-        <h2>Default Navbar</h2>
-    </nav>
-    {% endblock %}
-
-    <!-- Main content -->
-    {% block content %}
-    {% endblock %}
-
-    <!-- Scripts block -->
-    {% block scripts %}
-    {% endblock %}
-
-</body>
+  </head>
+  <body>
+    {% block content %}{% endblock %}
+  </body>
 </html>
