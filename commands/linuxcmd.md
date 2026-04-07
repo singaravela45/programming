@@ -52,3 +52,5 @@ file management
 | `find . -name "*.txt"` | Find all `.txt` files                                       |
 | `locate filename`      | Fast file search (requires `updatedb` index)                |
 
+
+
