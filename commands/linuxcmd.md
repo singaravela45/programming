@@ -70,3 +70,11 @@ sudo systemctl stop nginx
 sudo systemctl restart nginx
 sudo systemctl enable nginx - start when booting
 sudo systemctl disable nginx
+
+foreground and background process :
+Ctrl + Z - pauses the current process
+bg - resumes the process in background
+jobs - View background jobs
+fg - bring back to foreground
+Start a process directly in background
+Add & at the end
