@@ -18,3 +18,5 @@ for creating a virtual environment for python :use venv
 Create the venv - python3 -m venv venv
 activate - source venv/bin/activate
 deactivation - deactivate
+
+for downloading req.text  => pip3 install -r req.text
