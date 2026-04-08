@@ -61,10 +61,10 @@ CMD ["python", "-u", "backend/app.py"]    # then running the application
 then package  the application  :   
 docker build -t docker_tag file_location   
 
-docker build -t my_app .  
-then create the docker container using docker image  
+docker build -t my_app .   
+then create the docker container using docker image   
 
-Instead of rebuilding every time when we change the code , we can link your local code into the container  
+Instead of rebuilding every time when we change the code , we can link your local code into the container   
 docker run -p 5000:5000 -v $(pwd):/app myapp  
 
 Docker Compose:  
@@ -74,61 +74,60 @@ Define everything in one file
 Start everything with one command  
 
 template for flask :    
-version: '3.7'
-services:
-  app:
-    build: ./app
-    links:
-      - mysql
-    ports:
-      - "5000:5000"
+version: '3.7'  
+services:  
+  app:  
+    build: ./app  
+    links:  
+      - mysql  
+    ports:  
+      - "5000:5000"  
 
-   mysql:
-    container_name: mysql
-    build: ./db
-    restart: always
-    volumes:
-      - ./db_data:/var/lib/mysql
-      - ./db:/docker-entrypoint-initdb.d/:ro
-    env_file: ./.env
-    environment:
-      MYSQL_ROOT_PASSWORD: "${MYSQL_ROOT_PASSWORD}"
-      MYSQL_USER: "${MYSQL_USER}"
-      MYSQL_PASSWORD: "${MYSQL_PASSWORD}"
-      MYSQL_DATABASE: "${MYSQL_DATABASE}"
-    ports:
-    - 3306:3306
-networks:
-  web:
-    external: true
+   mysql:  
+    container_name: mysql  
+    build: ./db  
+    restart: always  
+    volumes:  
+      - ./db_data:/var/lib/mysql  
+      - ./db:/docker-entrypoint-initdb.d/:ro  
+    env_file: ./.env  
+    environment:  
+      MYSQL_ROOT_PASSWORD: "${MYSQL_ROOT_PASSWORD}"  
+      MYSQL_USER: "${MYSQL_USER}"  
+      MYSQL_PASSWORD: "${MYSQL_PASSWORD}"  
+      MYSQL_DATABASE: "${MYSQL_DATABASE}"  
+    ports:  
+    - 3306:3306  
+networks:  
+  web:  
+    external: true  
 
+dockerignore :  
+.dockerignore works like .gitignore  
+👉 but only for Docker build context  
 
-dockerignore :
-.dockerignore works like .gitignore
-👉 but only for Docker build context
-
-# Git
-.git
-.gitignore
-# Python cache
-__pycache__/
-*.pyc
-*.pyo
-# Virtual environment
-venv/
-env/
-# OS files
-.DS_Store
-Thumbs.db
-# Logs
-*.log
-# Docker files (optional)
-docker-compose.yml
-Dockerfile
-# Node (if you ever add frontend frameworks)
-node_modules/
-# IDE files
-.vscode/
-.idea/
-# Database files (if local)
-*.db
+# Git  
+.git  
+.gitignore  
+# Python cache  
+__pycache__/  
+*.pyc  
+*.pyo  
+# Virtual environment  
+venv/  
+env/  
+# OS files  
+.DS_Store  
+Thumbs.db  
+# Logs  
+*.log  
+# Docker files (optional)  
+docker-compose.yml  
+Dockerfile  
+# Node (if you ever add frontend frameworks)  
+node_modules/  
+# IDE files  
+.vscode/  
+.idea/  
+# Database files (if local)  
+*.db  
