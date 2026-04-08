@@ -1,4 +1,6 @@
-FROM  ubuntu
-COPY . /app
+FROM  python:3.10-slim
 WORKDIR /app
-CMD python3 -u app/backend/app.py
+COPY req.txt .
+RUN pip install -r  req.txt 
+COPY . .
+CMD ["python", "-u", "backend/app.py"]
