@@ -44,6 +44,7 @@ def delete(user_id:int):
         return redirect("/")
     except Exception as e:
         return f"error{e}"
+
 @app.route("/edit/<int:user_id>",methods=["GET","POST"])
 def edit(user_id:int):
     task=Table.query.get_or_404(user_id)
@@ -58,6 +59,7 @@ def edit(user_id:int):
             return f"error : {e}"
     else :
         return render_template("edit.html", task=task)
+
 if __name__ == "__main__":
     with app.app_context():
         db.create_all()
