@@ -70,37 +70,29 @@ docker run -p 5000:5000 -v $(pwd):/app myapp
 Docker Compose:  
 
 Run multiple containers together  
-Define everything in one file  
-Start everything with one command  
+Define everything in one file  (yaml file)
+Start everything with one command   
 
-template for flask :    
-version: '3.7'  
+template for flask :     
+version: "3.9"  
 services:  
-  app:  
-    build: ./app  
-    links:  
-      - mysql  
+  backend:  
+    build:  
+      context: ./backend  
+      dockerfile: Dockerfile  
+    container_name: flask_backend  
     ports:  
       - "5000:5000"  
-
-   mysql:  
-    container_name: mysql  
-    build: ./db  
-    restart: always  
-    volumes:  
-      - ./db_data:/var/lib/mysql  
-      - ./db:/docker-entrypoint-initdb.d/:ro  
-    env_file: ./.env  
-    environment:  
-      MYSQL_ROOT_PASSWORD: "${MYSQL_ROOT_PASSWORD}"  
-      MYSQL_USER: "${MYSQL_USER}"  
-      MYSQL_PASSWORD: "${MYSQL_PASSWORD}"  
-      MYSQL_DATABASE: "${MYSQL_DATABASE}"  
+  frontend:  
+    build:  
+      context: ./frontend  
+      dockerfile: Dockerfile  
+    container_name: frontend_app  
     ports:  
-    - 3306:3306  
-networks:  
-  web:  
-    external: true  
+      - "8080:80"  
+
+then docker-compose up --build
+
 
 dockerignore :  
 .dockerignore works like .gitignore  
