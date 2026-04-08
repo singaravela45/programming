@@ -1,6 +1,9 @@
 from flask import Flask,render_template,redirect,request
 from flask_sqlalchemy import SQLAlchemy
-app=Flask(__name__)
+import os   
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+app=Flask(__name__,template_folder=os.path.join(BASE_DIR, "../frontend/templates"))
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///user.db" #creating a db
 app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 db = SQLAlchemy(app) #connects Flask + DB
