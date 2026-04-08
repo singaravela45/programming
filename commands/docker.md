@@ -98,28 +98,28 @@ dockerignore :
 .dockerignore works like .gitignore  
 👉 but only for Docker build context  
 
-# Git  
+###### Git  
 .git  
 .gitignore  
-# Python cache  
+###### Python cache  
 __pycache__/  
 *.pyc  
 *.pyo  
-# Virtual environment  
+###### Virtual environment  
 venv/  
 env/  
-# OS files  
+###### OS files  
 .DS_Store  
 Thumbs.db  
-# Logs  
+###### Logs  
 *.log  
-# Docker files (optional)  
+###### Docker files (optional)  
 docker-compose.yml  
 Dockerfile  
-# Node (if you ever add frontend frameworks)  
+###### Node (if you ever add frontend frameworks)  
 node_modules/  
-# IDE files  
+###### IDE files  
 .vscode/  
 .idea/  
-# Database files (if local)  
+###### Database files (if local)  
 *.db  
