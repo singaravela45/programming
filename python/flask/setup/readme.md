@@ -6,6 +6,6 @@ Flask uses Jinja2, and html inheritance is heavily used
 use sqlalchemy for db in py
 
 installations:  
-pip install flask sqlalchemy 
+pip install flask Flask-SQLAlchemy requests
  
 
