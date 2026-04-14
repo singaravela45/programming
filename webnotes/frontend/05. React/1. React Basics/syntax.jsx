@@ -1,6 +1,23 @@
 // first create a react project using npm create vite@latest
 // then change directory to the project and then npm i
 
+// then for simplicity remove 
+// src/App.css (The demo styling)
+// src/index.css (The global styling)
+// src/assets/react.svg (The React logo)
+// public/vite.svg (The Vite logo)
+
+// then start to build fron app.jsx
+function App() {
+  return (
+    <div>
+      <h1>Hello World</h1>
+    </div>
+  )
+}
+export default App
+
+
 // components:
 // from one component we should returon only one parent
 // should close html tags

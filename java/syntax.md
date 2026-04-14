@@ -89,6 +89,7 @@ st.push(x);
 st.pop();
 st.peek(); // top
 st.isEmpty(); 
+q.size();
 
 //queue
 Queue<Integer> q = new LinkedList<>();

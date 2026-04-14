@@ -7,5 +7,3 @@ use sqlalchemy for db in py
 
 installations:  
 pip install flask Flask-SQLAlchemy requests
- 
-
