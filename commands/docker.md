@@ -7,7 +7,7 @@ docker run -Create a new container from an image and run it.
 
 Images are blueprints — read-only templates that describe how to build a container  
 Containers are running instances of those blueprints  
-  
+
 Containers  
 docker ps             # List running containers  
 docker ps -a          # List all containers  
@@ -64,7 +64,7 @@ docker build -t docker_tag file_location
 docker build -t my_app .   
 then create the docker container using docker image   
 
-Instead of rebuilding every time when we change the code , we can link your local code into the container   
+Instead of rebuilding every time when we change t he code , we can link your local code into the container   
 docker run -p 5000:5000 -v $(pwd):/app myapp  
 
 Docker Compose:  
