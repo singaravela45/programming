@@ -1,0 +1,23 @@
+in input.css 
+
+add 
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+/* Custom components and utilities */
+@layer components {
+  /* Custom Button */
+  .btn-primary {
+    @apply bg-blue-600 text-white font-bold py-2 px-4 rounded;
+  }
+
+  .btn-secondary {
+    @apply bg-pink-500 text-white font-semibold py-2 px-4 rounded-lg;
+  }
+
+  /* Custom Card */
+  .card {
+    @apply p-6 bg-white rounded-lg shadow-md;
+  }
+}
