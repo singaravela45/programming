@@ -73,6 +73,15 @@ map.get(key);
 map.getOrDefault(key, defaultVal);
 map.containsKey(key);
 map.remove(key);
+for (int num : arr) {
+    // If num exists, increment its count by 1; otherwise, default to 0 + 1
+    freqMap.put(num, freqMap.getOrDefault(num, 0) + 1);
+}
+
+// Display results
+for (Map.Entry<Integer, Integer> entry : freqMap.entrySet()) {
+    System.out.println(entry.getKey() + " occurs " + entry.getValue() + " times");
+}
 
 //tree map
 TreeMap<Integer, Integer> tm = new TreeMap<>();
