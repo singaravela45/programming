@@ -1,0 +1,144 @@
+HTML:
+
+for getting the html template type html5  
+ 
+Elements:
+
+Block-Level Elements
+<div>: A general-purpose container for other elements.  
+<p>: Defines a paragraph.   
+<h1>, <h2>, ..., <h6>: Heading elements of different levels.  
+<ol>, <ul>: Ordered and unordered lists.  
+<table>: Defines a table.  
+<form>: Used for HTML forms to collect user inputs.  
+<section>, <article>, <nav>, <aside>, <header>, <footer>: Semantic elements that define areas of a webpage.
+
+table:
+<table border="1">
+    <tr>
+        <th>Name</th>
+        <th>Age</th>
+    </tr>
+    <tr>
+        <td>David</td>
+        <td>22</td>
+    </tr>
+</table>
+
+Inline Elements:
+<span>: A general-purpose inline container for phrasing content.
+<a>: Creates hyperlinks.
+<img>: Embeds an image.
+<strong>, <b>: Used for strong emphasis and bold text, respectively.
+<em>, <i>: Used for emphasis and italic text, respectively.
+<br>: Inserts a line break within text.
+<input>: Creates interactive controls for forms.
+
+anchor tag:
+<a href="url">Link Text</a>
+types of targets:
+<a href="url" target="value">Link</a>
+_self (D) - same tab
+_blank    - Opens link in a new tab
+_parent   - Opens link in the parent frame
+_top      - Opens link in the full window
+
+input:
+<input type="text" placeholder="Enter your name">
+
+html attributs:
+
+class	    Groups elements and allows styling.
+style	    Inline CSS styles.
+src	        Specifies the source of various resources
+tabindex	Determines the order of focus during keyboard navigation.
+id	        Assigns a unique identifier to an element, allowing targeting with CSS or JavaScript.
+alt	        Provides alternative text for images, essential for accessibility and SEO.
+title	    Creates a tooltip that appears when a user hovers over the element.
+
+html forms:
+<form>
+    <label for="username">Username:</label><br>
+    <input type="text" id="username" name="username"><br><br>
+    <label for="password">Password:</label><br>
+    <input type="password" id="password" name="password"><br><br>
+    <input type="submit" value="Submit">
+</form>
+
+
+CSS:
+
+inline css:
+<p style="color: red;">Hello</p>
+
+internal css:
+<style>
+  p {
+    color: blue;
+  }
+</style>
+
+External CSS:
+<link rel="stylesheet" href="style.css">
+
+selector:
+
+element selector   - p{ }
+class selector     - .class{ }
+id selector        - #id { }
+Universal Selector - * {}
+
+Basic Properties:
+color: red;
+background-color: yellow;
+font-size: 18px;
+font-weight: bold;
+text-align: center;
+border: 1px solid black;
+
+box model:
+Margin → Border → Padding → Content
+
+Content:
+width: 200px;
+height: 100px;
+Padding:
+padding: 10px;
+Border:
+border: 2px solid black;
+Margin:
+margin: 20px;
+
+overflow: visible / hidden /scroll / auto
+overflow-x: scroll;
+overflow-y: hidden;
+
+display Property:
+display : block /inline / inline-block / none
+
+Position :
+position: static / relative /absolute / fixed / sticky
+
+relative → moves from itself
+absolute → looks for parent
+fixed → sticks to screen
+sticky → scroll + stick
+
+flexbox:
+display: flex;
+
+Flex Structure
+Flex Container → parent
+Flex Items → children
+
+Main axis → row (default)
+Cross axis → column
+
+flex-direction :
+flex-direction: row / column / row-reverse / column-reverse                                            -- Defines direction of items
+justify-content: flex-start / flex-end / center / space-between / space-around / space-evenly          -- Aligns items on main axis
+align-items: stretch / flex-start / flex-end / center / baseline                                       -- Aligns items on cross axis
+flex-wrap: nowrap / wrap / wrap-reverse;                                                               -- Controls wrapping of items
+align-content: flex-start / flex-end / center / space-between / space-around / space-evenly / stretch; -- Aligns multiple rows (only when wrap is used)
+gap: 10px / 1rem;                                                                                      -- Space between flex items
+

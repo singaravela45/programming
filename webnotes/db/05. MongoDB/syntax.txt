@@ -1,0 +1,55 @@
+fields => documents => collection => database
+
+Database Commands:
+show dbs 👉 Show all the databases
+db.getName() or db 👉 Shows current active database.
+db.dropDatabase() =>deletes the current database and all of its collections
+use <db_name> =>Switches to the database <db_name>. Creates it if it doesn’t exist.
+
+Collection Commands:
+show collections 👉 Show all the collections
+db.createCollection('<name>') =>creates a collection
+db.collections.drop() => deletes a collection
+
+Insert Operations:
+db.collectionName.insertOne({}) 👉This is how we can create empty collection.
+db.<collection>.insertOne({key: value})	Inserts a single document.
+db.<collection>.insertMany([{doc1}, {doc2}, ...])	Inserts multiple documents at once.
+
+Query Commands
+find:
+db.student.find() 👉 All Data
+db.student.find({"name": "alex"}) 👉 Student with the name of alex
+db.student.find({"name": "alex", age: 20}) 👉 Student with the name of alex & age of 20
+db.student.find({"name": "alex"}, {"name": 1}) 👉 Just give me the "NAME" of the student (nothing else)
+db.student.find({"name": "alex"}, {"name": 0}) 👉 Give me everything (BUT) the name.
+db.student.find({}, {"name": 1}) 👉 Give me all the documents with just their NAMES.
+db.<collection>.findOne({key: value}) 👉 Returns the first document matching the query.
+db.<collection>.find().pretty() 👉	Returns documents in a readable format.
+
+Update Commands:
+db.collectionName.updateOne({"name": "Movie"}, {$set: {"name": "New Movie"}}) 👉 Update Movie to "New Movie"
+db.collectionName.updateOne({"name": "count"}, {$inc: {count: 2}}) 👉 $inc (increment) by specified amount.
+db.friends.updateOne({"names": ["alex", "john"]}, { $push: {"names": "huxn"} }) 👉 Push new item at the end of the array.
+db.peoples.updateOne({_id: ObjectId("6499e17d7b0390625e58c20d")}, {$pull: { "p": ["new peoples"] }}) 👉 Update by actual ID
+db.<collection>.updateMany({filter}, {$set: {key: value}})	👉 Updates all matching documents.
+db.<collection>.replaceOne({filter}, {newDoc})	Replaces the matching document entirely.
+
+deleting:
+db.collectionName.deleteOne({filter: "filtername"}) 👉 Deletes the first document matching the filter.
+db.collectionName.deleteMany({filter: "filtername"}) 👉 Delete all document with specified filter.
+db.<collection>.remove({})   👉 Deletes all documents
+
+count,limit,sort,skip,Greater than ,lesser than:
+db.collectionName.find().count() 👉 Give us the number of documents we have.
+db.collectionName.find().limit(2) 👉 Allows us to limit our query.
+db.collectionName.find({}, {"name": 1}).sort({"name": 1}) 👉 ascending Order
+db.collectionName.find({}, {"name": 1}).sort({"name": -1}) 👉 Desending Order
+db.collectionName.find({}, {"name": 1}).sort({"name": 1}).skip(1) 👉 Allows us to skip (amountProvided) query
+db.collectionName.find({price: {$lt: 200}}) 👉 $lt means (Less then)
+db.collectionName.find({price: {$gt: 200}}) 👉 $gt means (Greater then)
+
+
+formatting:
+const results = db.movies.find().toArray()
+console.table(results)

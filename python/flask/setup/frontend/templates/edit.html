@@ -1,0 +1,15 @@
+{% extends "base.html" %} {% block title %} Edit User {% endblock %} {% block
+content %}
+<h2>✏️ Edit User</h2>
+<form method="POST">
+  <input type="text" name="name" value="{{ task.name }}" required />
+  <br /><br />
+  <input type="email" name="email_id" value="{{ task.email_id }}" required />
+  <br /><br />
+  <input type="text" name="phone_num" value="{{ task.phone_num }}" />
+  <br /><br />
+  <button type="submit">Update</button>
+</form>
+<br />
+<a href="/">⬅ Back</a>
+{% endblock %}
