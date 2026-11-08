@@ -1,4 +1,4 @@
-cp -L ~/lineo/build-mp1/tmp/deploy/images/raspberrypi4-64/core-image-base-raspberrypi4-64.rootfs.wic.bz2 ~/Downloads/  
+cp -L ~/lineo/build-mp1/tmp/deploy/images/raspberrypi4-64/custom-image-raspberrypi4-64.rootfs.wic.bz2 ~/Downloads/  
 bzip2 -d core-image-base-raspberrypi4-64.rootfs.wic.bz2
 
 flashing :
