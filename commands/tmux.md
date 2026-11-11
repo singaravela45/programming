@@ -13,7 +13,7 @@ C-A 0 to 9	Select window by number
 C-A w	Interactive menu of windows and panes  
 C-A &	Kill current window  
 
-Pane Management (Splits)  
+Panel Management (Splits)  
 C-A %	Split pane vertically (left / right)
 C-A "	Split pane horizontally (top / bottom)
 C-A Arrow Key	Move focus to adjacent pane
