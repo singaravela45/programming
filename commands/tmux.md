@@ -7,15 +7,15 @@ C-A s	Interactive list of all sessions (use arrow keys + Enter to switch)
 C-A $	Rename current session    
 
 Window Management  
-C-b c	Create a new window  
-C-b n / p	Move to next / previous window  
-C-b 0 to 9	Select window by number  
-C-b w	Interactive menu of windows and panes  
-C-b &	Kill current window  
+C-A c	Create a new window  
+C-A n / p	Move to next / previous window  
+C-A 0 to 9	Select window by number  
+C-A w	Interactive menu of windows and panes  
+C-A &	Kill current window  
 
 Pane Management (Splits)  
-C-b %	Split pane vertically (left / right)
-C-b "	Split pane horizontally (top / bottom)
-C-b Arrow Key	Move focus to adjacent pane
-C-b x	Close/kill current pane
-C-b q	Display pane numbers (press number key to jump to pane)
+C-A %	Split pane vertically (left / right)
+C-A "	Split pane horizontally (top / bottom)
+C-A Arrow Key	Move focus to adjacent pane
+C-A x	Close/kill current pane
+C-A q	Display pane numbers (press number key to jump to pane)
