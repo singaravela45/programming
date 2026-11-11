@@ -19,3 +19,5 @@ C-A "	Split pane horizontally (top / bottom)
 C-A Arrow Key	Move focus to adjacent pane
 C-A x	Close/kill current pane
 C-A q	Display pane numbers (press number key to jump to pane)
+
+tmux source-file ~/.tmux.conf
